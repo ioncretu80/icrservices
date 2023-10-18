@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: customer
+  datasource:
+    password: password
+    url: jdbc:postgresql://localhost:5432/customer?createDatabaseIfNotExist=true&amp;amp;useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;autoReconnect=true
+    username: amigoscode
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    hibernate:
+      ddl-auto: create
+    show-sql: true

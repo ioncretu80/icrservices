@@ -6,7 +6,11 @@
 
   <groupId>com.icrcode</groupId>
   <artifactId>icrservices</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>customer</module>
+  </modules>
 
   <name>icrservices</name>
   <url>http://www.example.com</url>
