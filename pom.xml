@@ -15,22 +15,20 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
-    <spring.boot.maven.version>2.5.7</spring.boot.maven.version>
+    <spring.boot.maven.plugin.version>2.5.7</spring.boot.maven.plugin.version>
     <spring.boot.dependecies.version>2.5.7</spring.boot.dependecies.version>
   </properties>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.springbootframework.boot</groupId>
-        <artifactId>spring-boot-admin-dependencies</artifactId>
-        <version>${spring.boot.dependecies.version}</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring.boot.dependecies.version}}</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
-
     </dependencies>
-
   </dependencyManagement>
 
   <dependencies>
@@ -41,19 +39,22 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
+
     </dependency>
+
   </dependencies>
 
   <build>
-    <pluginManagement>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
-          <version>${spring.boot.maven.version}</version>
+          <version>${spring.boot.maven.plugin.version}</version>
         </plugin>
 
       </plugins>
     </pluginManagement>
+
   </build>
 </project>
